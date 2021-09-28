@@ -31,7 +31,7 @@ func init() {
 var StartCmd = &cobra.Command{
 	Use:          "setup",
 	Short:        "Set up data for the application",
-	Example:      "{execfile} init -c config/settings.yml",
+	Example:      "{execfile} init -c config/config.yml  -m  config/menu.yml",
 	SilenceUsage: true,
 	PreRun: func(cmd *cobra.Command, args []string) {
 		lib.SetConfigPath(configFile)
