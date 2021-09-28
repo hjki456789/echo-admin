@@ -33,3 +33,4 @@ config/config.yaml
 *./build
 *./bindata
 
+build/
