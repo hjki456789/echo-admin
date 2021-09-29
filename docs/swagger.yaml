@@ -549,7 +549,7 @@ paths:
       summary: Menu Enable By ID
       tags:
       - Menu
-  /api/public/captcha:
+  /api/publics/captcha:
     get:
       produces:
       - application/json
@@ -569,7 +569,7 @@ paths:
       summary: Get Captcha
       tags:
       - Public
-  /api/public/captcha/verify:
+  /api/publics/captcha/verify:
     post:
       parameters:
       - description: CaptchaVerify

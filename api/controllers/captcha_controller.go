@@ -25,7 +25,7 @@ func NewCaptchaController(captcha lib.Captcha) CaptchaController {
 // @failure 200 {object} echox.Response "ok"
 // @failure 400 {object} echox.Response "bad request"
 // @failure 500 {object} echox.Response "internal error"
-// @Router /api/public/captcha [get]
+// @Router /api/publics/captcha [get]
 func (a CaptchaController) GetCaptcha(ctx echo.Context) error {
 	id, b64s, err := a.captcha.Generate()
 	if err != nil {
@@ -41,7 +41,7 @@ func (a CaptchaController) GetCaptcha(ctx echo.Context) error {
 // @Param data body dto.CaptchaVerify true "CaptchaVerify"
 // @Success 200 {string} echox.Response "ok"
 // @failure 400 {string} echox.Response "bad request"
-// @Router /api/public/captcha/verify [post]
+// @Router /api/publics/captcha/verify [post]
 func (a CaptchaController) VerifyCaptcha(ctx echo.Context) error {
 	verify := new(dto.CaptchaVerify)
 	if err := ctx.Bind(verify); err != nil {

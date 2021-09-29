@@ -18,8 +18,8 @@ var doc = `{
         "description": "{{.Description}}",
         "title": "{{.Title}}",
         "contact": {
-            "name": "LiuSha",
-            "email": "liusha@email.cn"
+            "name": "wsy",
+            "email": "hjki456789@email.cn"
         },
         "version": "{{.Version}}"
     },
@@ -501,7 +501,7 @@ var doc = `{
                 }
             }
         },
-        "/api/public/captcha": {
+        "/api/publics/captcha": {
             "get": {
                 "produces": [
                     "application/json"
@@ -532,7 +532,7 @@ var doc = `{
                 }
             }
         },
-        "/api/public/captcha/verify": {
+        "/api/publics/captcha/verify": {
             "post": {
                 "produces": [
                     "application/json"
