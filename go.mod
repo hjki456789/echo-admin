@@ -17,7 +17,7 @@ require (
 	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.7.0
 	github.com/swaggo/echo-swagger v1.1.0
-	github.com/swaggo/swag v1.7.0
+	github.com/swaggo/swag v1.7.3
 	go.uber.org/fx v1.13.1
 	go.uber.org/zap v1.16.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0

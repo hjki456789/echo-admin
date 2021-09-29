@@ -9,10 +9,12 @@ import (
 var configFile string
 
 func init() {
+	//PersistentFlags 全局性flag 可用于它所分配的命令以及该命令下的每个命令
 	pf := StartCmd.PersistentFlags()
 	pf.StringVarP(&configFile, "config", "c",
 		"config/config.yaml", "this parameter is used to start the service application")
 
+	//Required flagsRequired flags 必选flag
 	cobra.MarkFlagRequired(pf, "config")
 }
 
@@ -21,6 +23,14 @@ var StartCmd = &cobra.Command{
 	Short:        "Migrate database",
 	Example:      "{execfile} migrate -c config/config.yaml",
 	SilenceUsage: true,
+	// *Run 函数按以下顺序执行：
+	// * PersistentPreRun()
+	// * PreRun()
+	// * Run()
+	// * PostRun()
+	// * PersistentPostRun()
+	// 所有函数获取相同的参数，命令名称后的参数。
+	// // PersistentPreRun：此命令的子项将继承并执行。
 	PreRun: func(cmd *cobra.Command, args []string) {
 		lib.SetConfigPath(configFile)
 	},

@@ -61,6 +61,7 @@ var StartCmd = &cobra.Command{
 
 		var menuTrees models.MenuTrees
 		yd := yaml.NewDecoder(fs)
+		//将menuTrees存储地址传入Decode写入数据
 		if err = yd.Decode(&menuTrees); err != nil {
 			logger.Zap.Fatalf("menu file decode error: %v", err)
 		}
