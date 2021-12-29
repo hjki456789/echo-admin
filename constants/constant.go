@@ -15,5 +15,5 @@ const CurrentUser = "current-user"
 const RoutesCacheKey = "routes"
 
 // RedisDB
-const RedisMainDB = 0
+const RedisMainDB = 5
 const RedisTaskDB = 1
