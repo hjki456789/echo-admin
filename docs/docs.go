@@ -15,7 +15,7 @@ var doc = `{
     "schemes": {{ marshal .Schemes }},
     "swagger": "2.0",
     "info": {
-        "description": "{{.Description}}",
+        "description": "{{escape .Description}}",
         "title": "{{.Title}}",
         "contact": {
             "name": "wsy",
@@ -1510,12 +1510,8 @@ var doc = `{
         "echox.Response": {
             "type": "object",
             "properties": {
-                "data": {
-                    "type": "object"
-                },
-                "message": {
-                    "type": "object"
-                }
+                "data": {},
+                "message": {}
             }
         },
         "models.Menu": {
@@ -1849,6 +1845,13 @@ func (s *s) ReadDoc() string {
 		"marshal": func(v interface{}) string {
 			a, _ := json.Marshal(v)
 			return string(a)
+		},
+		"escape": func(v interface{}) string {
+			// escape tabs
+			str := strings.Replace(v.(string), "\t", "\\t", -1)
+			// replace " with \", and if that results in \\", replace that with \\\"
+			str = strings.Replace(str, "\"", "\\\"", -1)
+			return strings.Replace(str, "\\\\\"", "\\\\\\\"", -1)
 		},
 	}).Parse(doc)
 	if err != nil {

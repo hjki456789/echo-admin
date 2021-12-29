@@ -45,10 +45,8 @@ definitions:
     type: object
   echox.Response:
     properties:
-      data:
-        type: object
-      message:
-        type: object
+      data: {}
+      message: {}
     type: object
   models.Menu:
     properties:
@@ -248,8 +246,8 @@ definitions:
     type: object
 info:
   contact:
-    email: liusha@email.cn
-    name: LiuSha
+    email: hjki456789@email.cn
+    name: wsy
 paths:
   /api/menus:
     get:

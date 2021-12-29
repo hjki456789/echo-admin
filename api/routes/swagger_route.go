@@ -13,8 +13,8 @@ import (
 // @name Authorization
 // @schemes http https
 // @basePath /
-// @contact.name LiuSha
-// @contact.email liusha@email.cn
+// @contact.name wsy
+// @contact.email hjki456789@email.cn
 type SwaggerRoutes struct {
 	config  lib.Config
 	logger  lib.Logger

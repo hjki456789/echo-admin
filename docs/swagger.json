@@ -6,8 +6,8 @@
     "swagger": "2.0",
     "info": {
         "contact": {
-            "name": "LiuSha",
-            "email": "liusha@email.cn"
+            "name": "wsy",
+            "email": "hjki456789@email.cn"
         }
     },
     "basePath": "/",
@@ -1496,12 +1496,8 @@
         "echox.Response": {
             "type": "object",
             "properties": {
-                "data": {
-                    "type": "object"
-                },
-                "message": {
-                    "type": "object"
-                }
+                "data": {},
+                "message": {}
             }
         },
         "models.Menu": {
