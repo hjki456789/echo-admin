@@ -27,7 +27,6 @@
 build.sh
 
 # CONFIG
-config/config.yaml
 
 # BUILD
 *./build

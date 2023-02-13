@@ -1,0 +1,55 @@
+Name: echo-admin
+
+Log:
+  Level: debug
+  Format: console
+  Directory: ./logs
+  Development: true
+
+HTTP:
+  Host: 0.0.0.0
+  Port: 2222
+
+SuperAdmin:
+  Username: root
+  Realname: 超级管理员
+  Password: 123123
+
+Auth:
+  Enable: true
+  TokenExpired: 7200
+  IgnorePathPrefixes:
+    - /pprof
+    - /swagger
+    - /api/v1/publics/captcha
+    - /api/v1/publics/user/login
+
+Casbin:
+  Enable: true
+  Debug: false
+  AutoLoad: false
+  AutoLoadInternal: 10
+  IgnorePathPrefixes:
+    - /pprof
+    - /swagger
+    - /api/v1/publics/user
+    - /api/v1/publics/captcha
+
+Redis:
+  Host: 119.91.235.52
+  Port: 63790
+  Password: 
+  KeyPrefix: echo_admin
+
+Database:
+  Engine: mysql
+  Name: echo_admin
+  Host: 119.91.235.52
+  Port: 30006
+  Username: root
+  Password: YWqXCwheQt9wZu2QqFAw
+  TablePrefix: t
+  Parameters: charset=utf8mb4&parseTime=True&loc=Local&allowNativePasswords=true&timeout=5s
+  MaxLifetime: 7200
+  MaxOpenConns: 150
+  MaxIdleConns: 50
